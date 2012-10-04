@@ -5,7 +5,6 @@ USE_CAMERA_STUB := true
 
 # Camera
 TARGET_DISABLE_ARM_PIE := true
-BOARD_NEEDS_MEMORYHEAPPMEM := true
 BOARD_USE_NASTY_PTHREAD_CREATE_HACK := true
 COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 COMMON_GLOBAL_CFLAGS += -DQCOM_ICS_COMPAT
@@ -17,9 +16,11 @@ BOARD_CPU_COLOR_CONVERT := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/lge/msm7x27
-# Copy LG Kernel Headers here if necessary, DON'T use Adroid auto-generated headers
+# Copy LG Kernel Headers here if necessary, DON'T use Android auto-generated headers
 TARGET_SPECIFIC_HEADER_PATH := device/lge/msm7x27-common/include
 BOARD_KERNEL_CMDLINE := mem=471M console=ttyMSM2,115200n8 androidboot.hardware=qcom no_console_suspend
+BOARD_KERNEL_BASE := 0x13600000
+BOARD_KERNEL_PAGESIZE := 4096
 
 # CPU & Platform
 ARCH_ARM_HAVE_VFP := true
@@ -38,7 +39,7 @@ ENABLE_JSC_JIT := true
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
-# Boot loader & recovery
+# Bootloader & recovery
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
@@ -46,9 +47,8 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
+# Partition sizes
 # Fix this up by examining /proc/mtd on a running device
-BOARD_KERNEL_BASE := 0x12800000
-BOARD_KERNEL_PAGESIZE := 2048
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00440000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
 # Ignore that this is much larger than the 190Mb allowed.
@@ -59,6 +59,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0xE600000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0c780000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# Display
 # Enable OpenGL Hardware Acceleration
 USE_OPENGL_RENDERER := true
 TARGET_NO_HW_VSYNC := true
@@ -68,6 +69,7 @@ BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 BOARD_USE_SKIA_LCDTEXT := true
+BOARD_NEEDS_MEMORYHEAPPMEM := true
 BOARD_EGL_CFG := device/lge/msm7x27-common/configs/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
@@ -84,11 +86,13 @@ BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
+# Custom Libs
 # Use the custom lights libs
 TARGET_PROVIDES_LIBLIGHTS := true
+# Use the custom audio libs
+TARGET_PROVIDES_LIBAUDIO := true
 
 # Audio, Bluetooth & FM Radio
-TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USES_ICS_LIBAUDIO := true
 BOARD_USES_AUDIO_LEGACY := false
 BOARD_COMBO_DEVICE_SUPPORTED := true
