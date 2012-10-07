@@ -8,4 +8,6 @@ patch -p1 < packages_apps_LegacyCamera/0003-Add-support-for-Panorama-mode.patch
 patch -p1 < packages_apps_Gallery2/0001-hide-jelly-bean-camera.patch
 patch -p1 < external_libncurses/0001-Revert-Adding-code-to-copy-terminfo-data-to-system-e.patch
 patch -p1 < external_webkit/0001-Hack-shaders-to-work-on-devices-without-OES_external.patch
+patch -p1 < frameworks_av/0001-graphics-Add-directives-for-compatibility-with-older.patch
+patch -p1 < frameworks_native/0001-graphics-Add-directives-for-compatibility-with-older.patch
 cd /Volumes/Android/CM10
