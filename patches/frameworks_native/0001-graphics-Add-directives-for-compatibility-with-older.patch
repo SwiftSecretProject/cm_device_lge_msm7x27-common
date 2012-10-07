@@ -14,13 +14,13 @@ Conflicts:
 
 	libs/ui/GraphicBufferAllocator.cpp
 ---
- libs/ui/GraphicBufferAllocator.cpp                 |    9 +++++++++
- libs/ui/GraphicBufferMapper.cpp                    |   13 +++++++++++++
- opengl/include/GLES/glext.h                        |    4 ++++
- opengl/include/GLES2/gl2ext.h                      |    4 ++++
- opengl/libagl/state.cpp                            |    2 ++
- .../DisplayHardware/DisplayHardware.cpp            |    4 ++++
- services/surfaceflinger/Layer.cpp                  |    5 +++++
+ frameworks/native/libs/ui/GraphicBufferAllocator.cpp                 |    9 +++++++++
+ frameworks/native/libs/ui/GraphicBufferMapper.cpp                    |   13 +++++++++++++
+ frameworks/native/opengl/include/GLES/glext.h                        |    4 ++++
+ frameworks/native/opengl/include/GLES2/gl2ext.h                      |    4 ++++
+ frameworks/native/opengl/libagl/state.cpp                            |    2 ++
+ frameworks/native/services/surfaceflinger/DisplayHardware/DisplayHardware.cpp            |    4 ++++
+ frameworks/native/services/surfaceflinger/Layer.cpp                  |    5 +++++
  7 files changed, 41 insertions(+)
 
 diff --git a/libs/ui/GraphicBufferAllocator.cpp b/libs/ui/GraphicBufferAllocator.cpp

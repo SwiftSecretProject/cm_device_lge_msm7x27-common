@@ -10,7 +10,7 @@ https://github.com/cyanogenmod/android_frameworks_base/commit/fc496c0607d0d2863f
 
 Change-Id: I2789a98a7069d90da30ec1231882b697f2140fce
 ---
- .../colorconversion/SoftwareRenderer.cpp           |    2 ++
+ frameworks/av/media/libstagefright/colorconversion/SoftwareRenderer.cpp           |    2 ++
  1 file changed, 2 insertions(+)
 
 diff --git a/media/libstagefright/colorconversion/SoftwareRenderer.cpp b/media/libstagefright/colorconversion/SoftwareRenderer.cpp
