@@ -84,8 +84,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-player=true \
-    media.stagefright.enable-meta=false \
-    media.stagefright.enable-scan=false \
+    media.stagefright.enable-meta=true \
+    media.stagefright.enable-scan=true \
     media.stagefright.enable-http=true \
     media.stagefright.enable-aac=true \
     media.stagefright.enable-qcp=true
@@ -105,15 +105,21 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libtilerenderer \
     libopencorehw \
+    gralloc.default \
     gralloc.msm7x27 \
-    copybit.msm7x27 \
-    hwcomposer.msm7x27
+    hwcomposer.default \
+    hwcomposer.msm7x27 \
+    copybit.msm7x27
 
-# Media (no support for msm7x27 in JB)
-#PRODUCT_PACKAGES += \
-#    libstagefrighthw \
-#    libmm-omxcore \
-#    libOmxCore \
+# Media
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
+    libdivxdrmdecrypt \
+    libopencorehw
 
 # Misc
 PRODUCT_PACKAGES += \
