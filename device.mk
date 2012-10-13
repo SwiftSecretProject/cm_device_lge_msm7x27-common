@@ -77,7 +77,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gr.numframebuffers=3 \
     debug.qctwa.statusbar=1 \
     debug.qctwa.preservebuf=1 \
-    hwui.render_dirty_regions=false \
+    debug.hwui.render_dirty_regions=false \
     hwui.disable_vsync=true \
     hwui.print_config=choice \
     persist.sys.strictmode.visual=false
@@ -107,7 +107,7 @@ PRODUCT_PACKAGES += \
     libopencorehw \
     gralloc.default \
     gralloc.msm7x27 \
-#    hwcomposer.default \
+    hwcomposer.default \
     hwcomposer.msm7x27 \
     copybit.msm7x27
 
@@ -118,8 +118,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
-    libdivxdrmdecrypt \
-    libopencorehw
+    libdivxdrmdecrypt
 
 # Misc
 PRODUCT_PACKAGES += \
