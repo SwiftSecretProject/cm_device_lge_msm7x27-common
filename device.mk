@@ -107,13 +107,13 @@ PRODUCT_PACKAGES += \
     libopencorehw \
     gralloc.default \
     gralloc.msm7x27 \
-    hwcomposer.default \
+#    hwcomposer.default \
     hwcomposer.msm7x27 \
     copybit.msm7x27
 
 # Media
 PRODUCT_PACKAGES += \
-    libstagefrighthw \
+#    libstagefrighthw \
     libmm-omxcore \
     libOmxCore \
     libOmxVdec \
