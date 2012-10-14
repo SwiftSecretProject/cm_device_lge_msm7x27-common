@@ -33,9 +33,5 @@ cd $rootdirectory
 cd frameworks/native
 echo "Reversing frameworks/native patches..."
 patch -R < $rootdirectory/device/lge/msm7x27-common/patches/frameworks_native/0001-graphics-Add-directives-for-compatibility-with-older.patch
-cd $rootdirectory
-cd hardware/qcom/display
-echo "Reversing hardware/qcom/display patches..."
-patch -R < $rootdirectory/device/lge/msm7x27-common/patches/hardware_qcom_display/0001-Add-QCOM_MISSING_PIXEL_FORMATS-for-liberty-and-other.patch
 echo "Changing to build directory.."
 cd $rootdirectory
