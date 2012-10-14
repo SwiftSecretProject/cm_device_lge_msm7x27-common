@@ -19,8 +19,8 @@ TARGET_KERNEL_SOURCE := kernel/lge/msm7x27
 # Copy LG Kernel Headers here if necessary, DON'T use Android auto-generated headers
 TARGET_SPECIFIC_HEADER_PATH := device/lge/msm7x27-common/include
 BOARD_KERNEL_CMDLINE := mem=471M console=ttyMSM2,115200n8 androidboot.hardware=qcom no_console_suspend
-BOARD_KERNEL_BASE := 0x13600000
-BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_BASE := 0x12800000
+BOARD_KERNEL_PAGESIZE := 2048
 
 # CPU & Platform
 ARCH_ARM_HAVE_VFP := true
