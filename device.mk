@@ -73,7 +73,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hdmi_out=false \
     debug.sf.hw=1 \
     debug.enabletr=false \
-    debug.composition.type=mdp \
+    debug.composition.type=gpu \
     debug.gr.numframebuffers=3 \
     debug.qctwa.statusbar=1 \
     debug.qctwa.preservebuf=1 \
@@ -105,10 +105,12 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libtilerenderer \
     libopencorehw \
+    libsurfaceflinger \
     gralloc.default \
     gralloc.msm7x27 \
     hwcomposer.default \
     hwcomposer.msm7x27 \
+    copybit.default \
     copybit.msm7x27
 
 # Media
@@ -127,7 +129,7 @@ PRODUCT_PACKAGES += \
     lights.msm7x27 \
     lgapversion
 
-# Camera
+# Camera (LegacyCamera is only here to be added in the Gallery2.apk app just like the normal Jelly Bean Camera)
 PRODUCT_PACKAGES += \
     camera.msm7x27 \
     LegacyCamera
