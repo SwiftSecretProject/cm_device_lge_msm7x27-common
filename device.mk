@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libtilerenderer \
     libopencorehw \
-    libsurfaceflinger \
     gralloc.default \
     gralloc.msm7x27 \
     hwcomposer.default \
