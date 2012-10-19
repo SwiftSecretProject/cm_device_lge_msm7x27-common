@@ -56,40 +56,6 @@ PRODUCT_COPY_FILES += \
     device/lge/msm7x27-common/prebuilt/system/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/lge/msm7x27-common/prebuilt/system/etc/wl/nvram.txt:system/etc/wl/nvram.txt \
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.camera=msm7x27 \
-    debug.camcorder.disablemeta=1 \
-    ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1 \
-    ro.com.google.gmsversion=2.3_r6 \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    dalvik.vm.dexopt-flags=m=y \
-    ro.telephony.call_ring.multiple=false \
-    ro.vold.umsdirtyratio=20
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    com.qc.hardware=true \
-    com.qc.hdmi_out=false \
-    debug.sf.hw=1 \
-    debug.enabletr=false \
-    debug.composition.type=gpu \
-    debug.gr.numframebuffers=3 \
-    debug.qctwa.statusbar=1 \
-    debug.qctwa.preservebuf=1 \
-    debug.hwui.render_dirty_regions=false \
-    hwui.disable_vsync=true \
-    hwui.print_config=choice \
-    persist.sys.strictmode.visual=false
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-meta=true \
-    media.stagefright.enable-scan=true \
-    media.stagefright.enable-http=true \
-    media.stagefright.enable-aac=true \
-    media.stagefright.enable-qcp=true
-
 # Audio
 PRODUCT_PACKAGES += \
     audio_policy.msm7x27 \
