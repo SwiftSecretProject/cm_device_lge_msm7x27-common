@@ -94,9 +94,11 @@ PRODUCT_PACKAGES += \
     lights.msm7x27 \
     lgapversion
 
-# Camera (LegacyCamera is only here to be added in the Gallery2.apk app just like the normal Jelly Bean Camera)
+# Camera (LegacyCamera and libjni_legacymosaic.so are only here to be added 
+# in the Gallery2.apk app just like the normal Jelly Bean Camera)
 PRODUCT_PACKAGES += \
     camera.msm7x27 \
+    libjni_legacymosaic.so \
     LegacyCamera
 
 # Filesystem management tools
