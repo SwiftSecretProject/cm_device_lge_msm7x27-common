@@ -40,7 +40,7 @@ repo start non-patched packages/apps/Settings
 repo start patched packages/apps/Settings
 cd packages/apps/Settings
 echo "Applying Settings patches..."
-git am $rootdirectory/device/lge/msm7x27-common/patches/packages_apps_Settings/0001-Add-forum-link-to-device-info.patch
+git am $rootdirectory/device/lge/msm7x27-common/patches/packages_apps_Settings/0001-Add-forum-link.patch
 cd $rootdirectory
 repo start non-patched external/libncurses
 repo start patched external/libncurses
