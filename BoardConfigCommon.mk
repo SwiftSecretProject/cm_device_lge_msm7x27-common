@@ -14,10 +14,10 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_ICS_COMPAT
 TARGET_NO_HW_VSYNC := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/lge/msm7x27
+TARGET_KERNEL_SOURCE := kernel/lge/gt540
 # Copy LG Kernel Headers here if necessary, DON'T use Adroid auto-generated headers
 TARGET_SPECIFIC_HEADER_PATH := device/lge/msm7x27-common/include
-BOARD_KERNEL_CMDLINE := mem=471M console=ttyMSM2,115200n8 androidboot.hardware=qcom no_console_suspend
+BOARD_KERNEL_CMDLINE := mem=214M console=ttyMSM2,115200n8 androidboot.hardware=swift
 
 # CPU & Platform
 ARCH_ARM_HAVE_VFP := true
@@ -45,8 +45,8 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Fix this up by examining /proc/mtd on a running device
-BOARD_KERNEL_BASE := 0x12800000
-BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_BASE := 0x00200000
+BOARD_PAGE_SIZE := 0x00000800
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00440000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
 # Ignore that this is much larger than the 190Mb allowed.
